@@ -1,5 +1,8 @@
-# OLIST-Data-Engineering-AWS
-## Architecture Diagram
+# OLIST-Data-Engineering-AWS 😍
+
+A batch processing 🔧 Data Engineering/ Data Analytics project to get familiarized with different AWS services. I have tried incorporating as many real world AWS services as possible to build the architecture. However, since pricing 💸💸💸 is a concern and the dataset is relatively 🤏, I built 💪 a dashboard using React and Flask 🌐 as alternative of using Quicksight 🔍. I also used some free workaround for building AWS Glue jobs and performed the ETL using pyspark on my local. For easy development, I used google colab (I ❤️ colab), althought using Databricks 🧱 community version is also an alternative.
+
+## Architecture
 Findings:
 ```raw
     1. Costly to run Glue Jobs.
