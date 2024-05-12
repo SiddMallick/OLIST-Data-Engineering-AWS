@@ -5,10 +5,10 @@ import boto3
 import os 
 
 
-host = 'localhost'
+host = '<link-to-aws-rds-postgres>'
 dbname = 'olist'
-user = 'postgres'
-password = 'your-password'
+user = '<user-name>'
+password = '<your-password>'
 port = '5432'
 
 def delete_csv(file):
@@ -63,7 +63,7 @@ def export_table_to_csv(s3, s3_bucket_name, s3_folder_name, table_name, csv_file
     delete_csv(csv_file_name)
 
 
-s3= boto3.client('s3', aws_access_key_id='your-access-key', aws_secret_access_key='your-secret-key')
+s3= boto3.client('s3', aws_access_key_id='<your-access-key>', aws_secret_access_key='<your-secret-key>')
 export_table_to_csv(s3, 'sidd-rds-to-s3-olist', 'raw/','customers', 'customers.csv')
 export_table_to_csv(s3, 'sidd-rds-to-s3-olist', 'raw/','geolocation', 'geolocation.csv')
 export_table_to_csv(s3, 'sidd-rds-to-s3-olist', 'raw/','order_items', 'order_items.csv')
