@@ -10,3 +10,16 @@ Findings:
 
 ### Cost inducing solution (Do not use AWS Glue, Athena, Redshift and Quicksight if billing is a concern)
 ![AWS Data Pipeline](AWS_project_architecture.png)
+
+
+### Almost zero cost alternative 💯 🚀 !!!
+
+Notes:
+    1. Running the EC2 instance is also not required. One can do this on local as well.
+    2. This will work pretty well for smaller datasets. For larger datasets (Enterprise level) this architecture
+    might not work. For large datasets, one would ofcourse use a data warehousing solution with AWS Glue/ Databricks/
+    AWS lambda (for medium sized data) as their ETL solution.
+    3. Building the project this way gave me some knowledge 🧠 on building Flask Servers + React for simple
+    dashboarding.
+    
+![Zero Cost Pipeline](Almost_Zero_Cost_Solution_to_Dashboarding.png)
