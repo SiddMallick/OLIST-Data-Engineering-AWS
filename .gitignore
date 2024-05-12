@@ -1,0 +1,6 @@
+*.csv
+*.txt
+aws_ec2_instance_for_flask/
+data/
+processed/
+raw/
