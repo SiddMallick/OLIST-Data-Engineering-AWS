@@ -8,6 +8,7 @@ Findings:
     presentation layer and then the frontend can be built in React.JS to show the visualizations properly.
     4. For better support, use an EC2 instance that would run the flask server. In the free tier, running an
     EC2 instance is free for 750 hours a month.
+    5. Good to know how the services work for batch data processing.
 ```
 ### Cost inducing solution (Do not use AWS Glue, Athena, Redshift and Quicksight if billing is a concern)
 ![AWS Data Pipeline](AWS_project_architecture.png)
