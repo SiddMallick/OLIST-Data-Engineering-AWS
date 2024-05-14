@@ -4,3 +4,6 @@ aws_ec2_instance_for_flask/
 data/
 processed/
 raw/
+
+Ingestion/ingestion_test.py
+Ingestion/read_parquet.py
