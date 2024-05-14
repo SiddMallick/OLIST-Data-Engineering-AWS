@@ -119,8 +119,8 @@ products_transformed_df = products_df.join(broadcast(products_name_translation_d
                                            .drop(col('product_category')).drop(col('product_name_lenght'))\
                                            .drop(col('product_description_lenght')).withColumnRenamed('product_category_name_english', 'category')
 
-products_df.show(5)
-products_df.write.mode('overwrite').parquet(f'{write_path}/products')
+products_transformed_df.show(5)
+products_transformed_df.write.mode('overwrite').parquet(f'{write_path}/products')
 
 sellers_schema = StructType([StructField('seller_id', StringType(), True),
                             StructField('seller_zip_code_prefix', StringType(), True),
