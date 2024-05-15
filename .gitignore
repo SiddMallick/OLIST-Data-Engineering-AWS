@@ -4,6 +4,7 @@ aws_ec2_instance_for_flask/
 data/
 processed/
 raw/
+presentation/
 data_pipeline/ingestion_test.py
 data_pipeline/read_parquet.py
 
