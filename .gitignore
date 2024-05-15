@@ -7,3 +7,7 @@ raw/
 
 Ingestion/ingestion_test.py
 Ingestion/read_parquet.py
+
+server/.env
+venv/
+server/__pycache__/
