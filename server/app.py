@@ -47,6 +47,21 @@ def return_file_route(file_name):
     else:
         return jsonify(json_data), 200
 
+@app.route('/api/get/kpis', methods = ['GET'])
+def return_kpis():
+    try:
+        products_df = pd.read_csv('D:/Data_Engineering_Projects/OLIST-Data-Engineering-AWS/raw/products.csv')
+        customers_df = pd.read_csv('D:/Data_Engineering_Projects/OLIST-Data-Engineering-AWS/raw/customers.csv')
+        reviews_df = pd.read_csv('D:/Data_Engineering_Projects/OLIST-Data-Engineering-AWS/raw/order_reviews.csv')
+
+        json_data = {'number_of_products': products_df['product_id'].nunique(),
+                    'number_of_customers': customers_df['customer_unique_id'].nunique(),
+                    'number_of_reviews': reviews_df['review_id'].nunique(),
+                    'number_of_orders': customers_df['customer_id'].nunique()}
+        
+        return jsonify(json_data), 200
+    except:
+        return jsonify({"Message":"Error"}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -6,7 +6,7 @@ A batch processing 🔧 Data Engineering/ Data Analytics project to get familiar
 
 Dashboard build with React + Vite and Bootstrap.
 
-![Final Visualization](visualization_react.png)
+![Final Visualization](visualization_react_1.png)
 
 ## Architecture
 Findings:
