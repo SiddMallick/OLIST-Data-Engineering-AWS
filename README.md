@@ -19,6 +19,11 @@ Findings:
 
 ### Almost zero cost alternative 💯 🚀 !!!
 
+If using AWS services like Glue, Athena and Quicksight which are not in the free tier subscription too expensive for you, working with free alternatives also should work fine as long as the datasets you are processing consumes less resources. Spinning up a virtual machine with ubuntu (working with Windows was'nt helpful for me as I had issues connecting pyspark with s3) or using WSL might also work for your pyspark workload. Also to visualize data, using Flask and React to build dashboards (dynamic) might also be a good development experience for many.
+I followed the architecture diagram below starting from the raw zone in s3 all the way up to dashboarding with React. This costed me $0 dollars as running a flask server on an EC2 instance is free for 750 hours/month for a year.
+
+![Zero Cost Pipeline](Almost_Zero_Cost_Solution_to_Dashboarding.png)
+
 Notes:
 ```raw
     1. Running the EC2 instance is also not required. One can do this on local as well.
@@ -28,4 +33,3 @@ Notes:
     3. Building the project this way gave me some knowledge 🧠 on building Flask Servers + React for simple
     dashboarding.
 ```  
-![Zero Cost Pipeline](Almost_Zero_Cost_Solution_to_Dashboarding.png)
