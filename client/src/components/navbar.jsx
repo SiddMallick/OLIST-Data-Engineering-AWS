@@ -6,7 +6,7 @@ const Navbar = () => {
         
         <nav className="navbar">
             <div className="container-fluid">
-                <span className="navbar-brand mb-0 h1">Olist Data-viz</span>
+                <span className="navbar-brand mb-0 h1"> <h3>Olist Data-viz</h3></span>
             </div>
         </nav>
 

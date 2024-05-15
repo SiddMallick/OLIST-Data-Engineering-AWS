@@ -26,8 +26,8 @@ const ProductCategorySales = () => {
         <>
             <div class="card text-bg-light mb-3" style={{ maxWidth: "50rem" }}>
                 <div className = 'card-header'>
-                    <h2 class="card-title">Orders per Day</h2>
-                    <p class="card-title">Number of Orders per Day</p>
+                    <h2 class="card-title">Sales per Category</h2>
+                    <p class="card-title">by Month</p>
                 </div>
                 <div class="card-body">
                     
@@ -47,11 +47,13 @@ const ProductCategorySales = () => {
                         <XAxis dataKey="year_month" />
                         <YAxis />
                         <Tooltip />
+                        <Legend />
                         <Area type="monotone" dataKey="bed_bath_table" stackId="1" stroke="#C1F335" fill="#C1F335" />
                         <Area type="monotone" dataKey="computer_accessories" stackId="2" stroke="#F748B7" fill="#F748B7" />
                         <Area type="monotone" dataKey="health_beauty" stackId="3" stroke="#62D926" fill="#62D926" />
                         <Area type="monotone" dataKey="sports_leisure" stackId="4" stroke="#3838AB" fill="#3838AB" />
                         <Area type="monotone" dataKey="watches_gifts" stackId="5" stroke="#EE402E" fill="#EE402E" />
+                    
                     </AreaChart>
                 </div>
             </div>

@@ -25,7 +25,7 @@ const OrderPerDays = () => {
 
         <>  
 
-            <div class="card text-bg-light mb-3" style={{maxWidth : "28rem"}}>
+            <div class="card text-bg-light mb-3" >
                 <div className='card-header'>
                     <h2 class="card-title">Orders per Day</h2>
                     <p class="card-title">Number of Orders per Day</p>
@@ -33,7 +33,7 @@ const OrderPerDays = () => {
                 <div class="card-body">
                     
                     <AreaChart
-                        width={400}
+                        width={500}
                         height={200}
                         data={data}
                         margin={{
