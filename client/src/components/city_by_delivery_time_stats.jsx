@@ -13,7 +13,11 @@ const CityByDeliveryTimeStats = () => {
     const fetchData = async () => {
         try {
             const response = await axios.get('http://127.0.0.1:5000/api/get/city_by_delivery_time_stats');
+            //const response = await axios.get('/api/get/city_by_delivery_time_stats');
+
             const jsonArray = response.data["data"]
+
+            
             jsonArray.forEach(obj => {
                 obj.total_sales = parseFloat(obj.total_sales);
             })

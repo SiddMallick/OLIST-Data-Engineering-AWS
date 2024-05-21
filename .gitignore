@@ -11,3 +11,4 @@ data_pipeline/read_parquet.py
 server/.env
 venv/
 server/__pycache__/
+raw-incremental/

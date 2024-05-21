@@ -13,6 +13,7 @@ const ProductCategorySales = () => {
     const fetchData = async () => {
         try {
             const response = await axios.get('http://127.0.0.1:5000/api/get/product_category_sales_by_month');
+            // const response = await axios.get('/api/get/product_category_sales_by_month');
             setData(response.data["data"]); // Set the fetched data to state
             console.log(response.data["data"]);
         } catch (error) {

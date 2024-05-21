@@ -13,6 +13,8 @@ const OrderPerDays = () => {
     const fetchData = async () => {
         try {
             const response = await axios.get('http://127.0.0.1:5000/api/get/orders_per_day');
+            // const response = await axios.get('/api/get/orders_per_day');
+
             setData(response.data["data"]); // Set the fetched data to state
             console.log(response.data["data"]);
         } catch (error) {
