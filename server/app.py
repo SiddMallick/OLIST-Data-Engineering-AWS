@@ -16,13 +16,9 @@ s3_client = boto3.client('s3',
 
 # Define the function to read the CSV file
 def read_csv(csv_file):
-
-
-    # Read the CSV file into a list of rows
-    
     input_file = csv.DictReader(open(csv_file))
     json_data = [row for row in input_file]
-    # Return the list of rows as a JSON response
+    
     return json_data
 
 def get_csv_data(file_name):
@@ -31,9 +27,6 @@ def get_csv_data(file_name):
         csv_file = file_content['Body'].read().decode('utf-8')
         csv_reader = csv.DictReader(csv_file.splitlines())
         json_data = [row for row in csv_reader]
-
-        # json_data = read_csv(f'D:/Data_Engineering_Projects/OLIST-Data-Engineering-AWS/presentation/{file_name}')
-        # json_data = {'hello': 'hi'}
         return {'file_name':file_name, 'data':json_data}
     
     except:
@@ -53,14 +46,6 @@ def return_file_route(file_name):
 @app.route('/api/get/kpis', methods = ['GET'])
 def return_kpis():
     try:
-        # products_df = pd.read_csv('D:/Data_Engineering_Projects/OLIST-Data-Engineering-AWS/raw/products.csv')
-        # customers_df = pd.read_csv('D:/Data_Engineering_Projects/OLIST-Data-Engineering-AWS/raw/customers.csv')
-        # reviews_df = pd.read_csv('D:/Data_Engineering_Projects/OLIST-Data-Engineering-AWS/raw/order_reviews.csv')
-
-        # products_df = pd.read_csv('s3://olist-data-lake/raw/products.csv')
-        # customers_df = pd.read_csv('s3://olist-data-lake/raw/customers.csv')
-        # reviews_df = pd.read_csv('s3://olist-data-lake/raw/order_reviews.csv')
-
         file_content = s3_client.get_object(Bucket = 'olist-data-lake', Key=f'raw/customers.csv')
         csv_file = file_content['Body'].read().decode('utf-8')
         csv_reader = csv.DictReader(csv_file.splitlines())
