@@ -12,8 +12,8 @@ const CustomerwiseTotalSales = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:5000/api/get/categorywise_total_sales');
-            // const response = await axios.get('/api/get/categorywise_total_sales');
+            // const response = await axios.get('http://127.0.0.1:5000/api/get/categorywise_total_sales');
+            const response = await axios.get('/api/get/categorywise_total_sales');
 
             const jsonArray = response.data["data"]
             jsonArray.forEach(obj => {

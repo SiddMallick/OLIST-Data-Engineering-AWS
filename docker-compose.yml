@@ -9,11 +9,11 @@ services:
       - ./server:/server
 
   web:
-    build: ./client
+    build: ./react_client
     ports:
-      - "8080:8080"
+      - "3000:3000"
     volumes:
-      - ./client:/usr/src/app
+      - ./react_client:/usr/src/app
     
     depends_on:
       - server
