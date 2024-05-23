@@ -8,11 +8,7 @@ Dashboard build with React + Vite and Bootstrap.
 
 ![Final Visualization](visualization_react_1.png)
 
-## Architecture
-
-The architecture is a walkthrough of how a big data ETL pipeline can be built in AWS. We assume that the data is present in a local database instance (in the real world the Postgres database will be hosted in company data centers). A common requirement might be to first migrate the data to a AWS RDS postgres database. Then with the help of a lambda or python code, we can ship the data to a 'Raw Zone' and save it in .csv or the format we like. Next, following the medallion architecture, we would be developing PySpark based data ingestion and data transformation codes. AWS provides AWS Glue to achieve such objectives.
-Next, in a typical data pipeline, one would want to analyze the data from the processed layer for performing some EDA. This can be done by building Glue Catalogs and then analyzing the processed data (typically saved in parquet) in AWS Athena or any other adhoc query tool. After the data is ready for presentation, in a medallion architecture, typically the data from both processed and presentation zones would be stored in a data warehouse. Finally, this data will be visualized/ analyzed in a BI reporting tool such as AWS Quicksight (offered by AWS), Tableau, Power BI, Thoughtspot etc.
-
+## Architecture 
 
 The architecture is a walkthrough of how a big data ETL pipeline can be built in AWS. We assume that the data is present in a local database instance (in the real world the Postgres database will be hosted in company data centers). A common requirement might be to first migrate the data to a AWS RDS postgres database. Then with the help of a lambda or python code, we can ship the data to a 'Raw Zone' and save it in .csv or the format we like. Next, following the medallion architecture, we would be developing PySpark based data ingestion and data transformation codes. AWS provides AWS Glue to achieve such objectives.
 Next, in a typical data pipeline, one would want to analyze the data from the processed layer for performing some EDA. This can be done by building Glue Catalogs and then analyzing the processed data (typically saved in parquet) in AWS Athena or any other adhoc query tool. After the data is ready for presentation, in a medallion architecture, typically the data from both processed and presentation zones would be stored in a data warehouse. Finally, this data will be visualized/ analyzed in a BI reporting tool such as AWS Quicksight (offered by AWS), Tableau, Power BI, Thoughtspot etc.
