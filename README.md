@@ -52,6 +52,6 @@ Notes:
     3. Building the project this way gave me some knowledge 🧠 on building Flask Servers + React for simple
 ``` 
 
-Data Source (Brazilian E-Commerce Publuc Dataset by Olist)
+Data Source (Brazilian E-Commerce Publuc Dataset by Olist):
 
 Kaggle: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=olist_order_items_dataset.csv
