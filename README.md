@@ -50,7 +50,7 @@ Notes:
 
 ### Installing pyspark in Ubuntu:
 
-I used a VM and installed Ubuntu 22.04LTS to run pyspark properly because the pyspark install on Windows was not properly working for s3a file system.
+I used a VM and installed Ubuntu 22.04LTS to run pyspark properly because the pyspark install on Windows was not properly working for s3a file system. Later I installed pyspark on EC2 once the development was done and i used the same commands and process listed below.
 I initially struggled to find the right commands for installing pyspark in Ubuntu. Run 🚀 these to install pyspark properly:
 
 ```bash
