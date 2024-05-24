@@ -75,6 +75,6 @@ Run nano ~/.bashrc and then paste the following:
 Save the bashrc file and next run source ~/.bashrc to apply the changes made.
 
 
-### Data Source (Brazilian E-Commerce Publuc Dataset by Olist):
+### Data Source (Brazilian E-Commerce Public Dataset by Olist):
 
 Kaggle: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=olist_order_items_dataset.csv
