@@ -48,6 +48,33 @@ Notes:
     3. Building the project this way gave me some knowledge 🧠 on building Flask Servers + React for simple
 ``` 
 
-Data Source (Brazilian E-Commerce Publuc Dataset by Olist):
+### Installing pyspark in Ubuntu:
+
+I used a VM and installed Ubuntu 22.04LTS to run pyspark properly because the pyspark install on Windows was not properly working for s3a file system.
+I initially struggled to find the right commands for installing pyspark in Ubuntu. Run 🚀 these to install pyspark properly:
+
+```bash
+    sudo apt-get update
+    sudo apt install python3-pip
+    sudo apt-get install default.jre
+    sudo apt-get install scala
+    pip3 install py4j
+    wget https://archive.apache.org/dist/spark... 
+    sudo tar -zxvf spark-3.5.1-bin-hadoop3.tgz
+    sudo mv spark-3.5.1-bin-hadoop3 /opt/spark 
+    pip3 install findspark
+```
+
+Run nano ~/.bashrc and then paste the following:
+
+```bash
+    export SPARK_HOME=/opt/spark
+    export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+```
+
+Save the bashrc file and next run source ~/.bashrc to apply the changes made.
+
+
+### Data Source (Brazilian E-Commerce Publuc Dataset by Olist):
 
 Kaggle: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=olist_order_items_dataset.csv
