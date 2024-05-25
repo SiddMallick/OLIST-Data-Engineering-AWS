@@ -23,7 +23,7 @@ def read_csv(csv_file):
 
 def get_csv_data(file_name):
     try:
-        file_content = s3_client.get_object(Bucket = 'olist-data-lake', Key=f'presentation/{file_name}')
+        file_content = s3_client.get_object(Bucket = '<bucket-name>', Key=f'presentation-incremental/{file_name}')
         csv_file = file_content['Body'].read().decode('utf-8')
         csv_reader = csv.DictReader(csv_file.splitlines())
         json_data = [row for row in csv_reader]
@@ -46,21 +46,21 @@ def return_file_route(file_name):
 @app.route('/api/get/kpis', methods = ['GET'])
 def return_kpis():
     try:
-        file_content = s3_client.get_object(Bucket = 'olist-data-lake', Key=f'raw/customers.csv')
+        file_content = s3_client.get_object(Bucket = '<bucket-name>', Key=f'processed-incremental/customers.csv')
         csv_file = file_content['Body'].read().decode('utf-8')
         csv_reader = csv.DictReader(csv_file.splitlines())
         json_data = [row for row in csv_reader]
 
         customers_df = pd.DataFrame(json_data)
 
-        file_content = s3_client.get_object(Bucket = 'olist-data-lake', Key=f'raw/products.csv')
+        file_content = s3_client.get_object(Bucket = '<bucket-name>', Key=f'processed-incremental/products.csv')
         csv_file = file_content['Body'].read().decode('utf-8')
         csv_reader = csv.DictReader(csv_file.splitlines())
         json_data = [row for row in csv_reader]
 
         products_df = pd.DataFrame(json_data)
 
-        file_content = s3_client.get_object(Bucket = 'olist-data-lake', Key=f'raw/order_reviews.csv')
+        file_content = s3_client.get_object(Bucket = '<bucket-name>', Key=f'processed-incremental/order_reviews.csv')
         csv_file = file_content['Body'].read().decode('utf-8')
         csv_reader = csv.DictReader(csv_file.splitlines())
         json_data = [row for row in csv_reader]
