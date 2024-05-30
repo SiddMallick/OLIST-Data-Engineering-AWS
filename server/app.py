@@ -30,7 +30,7 @@ def get_csv_data(file_name):
         return {'file_name':file_name, 'data':json_data}
     
     except:
-        return {'message':'Error'}
+        return {'message':'Error loading'}
 
 
 
